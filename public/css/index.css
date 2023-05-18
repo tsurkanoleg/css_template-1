@@ -1,7 +1,92 @@
-html {
-  max-width: 720px;
+.card>p1 {
+    color:#172287
+}
+.card>p2{
+    color: rgb(159, 157,153);
+    background: red;
 }
 
-body {
-  background: #fff;
+.card>p3{
+    color: rgba(159, 157,153,0.3);
+    background: red;
+	text-decoration: overline dotted red;
+}
+
+
+.card>p4{
+    color:hsla(166, 60%, 44%, 0.31) 
+	   
+}
+.card>p5{
+    color: green;
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke: 1px blue;
+
+	
+	text-decoration: line-through dotted red;
+	
+}
+
+p6:focus, p6:active, p6:hover{
+    -webkit-text-fill-color: rgb(254,246,8);
+    -webkit-text-stroke: 1px rgb(254, 0, 168);
+
+    direction: ltr;
+	text-decoration: underline dotted red;
+}
+p7{
+    color: unset;
+    -webkit-text-fill-color: unset;
+    -webkit-text-stroke: unset;
+
+    writing-mode: vertical-rl;
+}
+p8{
+    writing-mode: vertical-lr;
+}
+
+/* вирівнювання по горизонталі, 
+лише для тегів контейнерів 
+які розтягуються на всю ширину */
+p7p{
+    text-align: right;
+    text-transform: capitalize;
+}
+p8p{
+    text-align: center;
+    text-transform: lowercase;
+}
+p9p{
+    text-align: left;
+    text-transform: uppercase;   			               
+}
+
+pre{
+	tab-size: 1;
+	letter-spacing: 10%;
+}
+
+* {
+	font-family: 'Roboto',sans-serif ;
+	font-size: 18px;
+	font-weight: 900;
+
+	font-display: swap;
+}
+span{
+	font-size: larger ;
+	font-weight: lighter;
+	/* font-style: oblique ; */
+	
+}
+.test{
+	display: none;
+}
+
+.block{
+	display:block;
+	background: rgb(173, 171, 171);
+	margin:auto;
+	width: 100%;
+	max-width: 600px;
 }
