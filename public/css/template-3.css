@@ -129,7 +129,7 @@ line-height: 100%;
 .hero_image {
 	width: 500px;
 	height: 500px;
-	border-radius:(--border-radius) ;
+	border-radius:var(--border-radius) ;
 }
 
 .hero_content {
