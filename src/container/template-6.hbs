@@ -9,29 +9,18 @@
 	</nav>
 </header>
 
-
-<main class="main">
-	{{#with messages}}
-		<div class="messages">
-			<h1 class="messages_title">{{title}}</h1>
-
-			{{#each list}} 
-				<div class="msg">
-					<strong class="msg_name">{{name}}</strong>
-					<p class="msg_text">{{message}}</p>
-					<span class="msg_day">{{day}}</span>
-				</div>
-			{{/each}}
-
-			<a href="#" class="messages_link">All messages</a>
-		</div>
-	{{/with}}
+<div class="main">
+	<div class="info">
+		<div class="info_title">{{info.title}}</div>
+		<div class="info_description">{{info.description}}</div>
+	</div>
+	
 	{{#with form}}
 		<form class="form">
 			<h2 class="form_title">{{title}}</h2>
 
 			<div class="form_input_list">
-				{{#each inputs}} 
+				{{#each inputs}}
 					<input type="{{type}}" class="form_input" name="{{name}}" placeholder="{{placeholder}}" id="form-input-{{id}}">
 				{{/each}}
 			</div>
@@ -42,20 +31,50 @@
 			</div>
 
 			<button class="form_button" type="submit">{{button}}</button>
+			<div class="form_line"></div>
 			<p class="form_info">{{info}}</p>
 		</form>
 	{{/with}}
+</div>
 
-</main>
+<div class="updates">
+	{{#with updates}}
+		<div class="updates_title">{{title}}</div>
+		<div class="updates_list">
+			{{#each list}} 
+				<div class="avatar"></div>
+				<h3 class="list_nickname">@{{nickname}}</h3>
+				<p class="list_description">{{description}}</p>
+				<div class="border_padding"></div>
+			{{/each}}
+		</div>
+		<a href="{{show_all.url}}" class="updates_show_all">{{show_all.text}}</a>
+		
+	{{/with}}
+	
+</div>
 
-<div class="advantages">
+<div class="experience">
+	{{#with expirience}} 
+		<div class="experience_title">{{title}}</div>
+		<div class="experience_badge">{{badge}}</div>
+		{{#each list}} 
+			<div class="list_list">
+				<h4 class="list_name">{{name}}</h4>
+				<p class="list_details">{{details}}</p>
+			</div>
+		{{/each}}
+	{{/with}}
+</div>
+
+{{!-- <div class="advantages">
 	{{#each advantages}} 
 		<div>
 			<strong>{{title}}</strong>
 			<p>{{text}}</p>
 		</div>
 	{{/each}}
-</div>
+</div> --}}
 		
 <footer class="footer" id="test">
 	<div>
