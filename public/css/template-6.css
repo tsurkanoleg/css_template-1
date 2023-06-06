@@ -142,131 +142,6 @@ transition-duration: 1s;
 	font-weight: var(--weight-title);
 }
 
-
-/* ======================================= */
-/* 
-.main {
-	display: flex;
-	width: 100%;
-	gap: 40px;
-	align-items: flex-start;
-}
-
-.messages {
-	max-width: 620px;
-	width: 100%;
-
-	background-color: var(--color-white);
-	border-radius: var(--border-radius-d);
-
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-
-	padding: var(--space-l);
-
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-l);
-}
-
-.messages_title {
-	font-size: var(--size-b);
-	color: var(--color-title);
-	font-weight: var(--weight-text);
-
-	padding-bottom: var(--space-m);
-	border-bottom: 1px solid var(--color-border);
-}
-
-.messages_link {
-	color: var(--color-primary);
-	font-size: var(--size-s);
-	text-align: right;
-	align-self: flex-end;
-	text-decoration: none;
-
-	transition-duration: 0.7s;
-	transition-property: border-color, opacity;
-
-	border-bottom: 1px solid transparent;
-}
-
-.messages_link:hover {
-	opacity: 0.7;
-	border-color: var(--color-primary);
-}
-
-.msg {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-m);
-
-	padding-bottom: var(--space-m);
-	border-bottom: 1px solid var(--color-border);
-	position: relative;
-
-	padding-right: var(--space-b);	
-}
-
-.msg_name {
-	font-size: var(--size-b);
-	color: var(--color-title);
-	font-weight: var(--weight-title);
-}
-
-.msg_text {
-	font-size: var(--size-b);
-	color: var(--color-title);
-	font-weight: var(--weight-text);
-}
-
-.msg_day {
-	position: absolute;
-	right: 0;
-	top: 0;
-	
-}
-
-
-
-
-
-.advantages {
-	display: flex;
-	gap: var(--space-l);
-}
-
-.advantages > div {
-	display: flex;
-	flex-direction: column;
-	border: 1px solid #e4eaf2;
-	border-radius: var(--border-radius-d);
-	padding: var(--space-l);
-	gap: var(--space-s);	
-}
-
-.advantages > div > strong {
-	color: var(--color-title);
-	font-weight: var(--weight-title);
-	font-size: 18px;
-}
-
-.advantages > div >p {
-	color: #767676;
-	font-size: var(--size-d);
-	line-height: 150%;
-}
-
-.advantages > div:nth-child(2) {
-	flex-grow: 1;
-	width: 100%;
-}
-
-
- */
-
-
-
-
 .main {
 	display: flex;
 	width: 100%;
@@ -381,6 +256,8 @@ transition-duration: 1s;
 	font-size: var(--size-d);
 }
 
+
+
 .updates {
 	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
 	border-radius: var(--border-radius-s);
@@ -400,16 +277,25 @@ transition-duration: 1s;
 	border-bottom: 1px solid #DEE2E6;
 }
 
-.avatar {
-	width: 32px;
-	height: 32px;
-	background-color: red;
-}
-
 .updates_list {
 	display: flex;
 	flex-direction: column;
 }
+
+.updates_div {
+	display: flex;
+	width: 100%;
+	gap: 8px;
+}
+
+.updates_avatar {
+	width: 32px;
+	height: 32px;
+	background-color: red;
+	align-items: center;
+}
+
+
 
 .list_nickname {
 	font-size: 12px;
@@ -425,33 +311,89 @@ transition-duration: 1s;
 	padding-bottom: 12px;
 }
 
-.updates_show_all{
+.updates_show_all {
+	color: #007BFF;
 	font-size: 14px;
+}
+
+.updates_show_all:hover {
+	opacity: 0.7;
+	transition-duration: 0.7s;
 }
 
 .border_padding {
 	border: 1px solid #DEE2E6;	
 	margin-bottom: 24px;
 }
-
+/* ======================================== */
 .experience {
 	display: flex;
 	gap: var(--space-l);
-}
-
-.list_list {
-	display: flex;
 	flex-direction: column;
-	border: 1px solid #e4eaf2;
-	border-radius: var(--border-radius-d);
 	padding: var(--space-l);
-	gap: var(--space-s);
+	background: #F8F9FA;
+	border-radius: var(--border-radius-s);
 }
 
 .experience_title {
 	text-align: left;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 120%;
+	color: #212529;
+
 }
 
 .experience_badge {
 	text-align: right;
+
+	align-items: center;
+	padding: 12px 24px;
+	gap: 12px;
+
+	background: #FF7347;
+	border-radius: 70px;
+	transform: rotate(30deg);
+
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 120%;
+
+	color: var(--color-white)
+
+	position
+}
+
+.experience_list {
+	display: flex;
+	gap: 24px;
+}
+
+.experience_list_list {
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--border-radius-d);
+	padding: var(--space-l);
+	gap: var(--space-s);
+
+	background-color: var(--color-title);	
+}
+
+.experience_list_name {
+	font-weight: 700;
+	font-size: var(--size-l);
+	line-height: 26px;
+
+	color: var(--color-white);
+}
+
+.experience_list_details {
+	font-size: 16px;
+	line-height: 22px;
+	color: #B1B1B1;
+}
+
+.experience_tb {
+	display: flex;
+	justify-content: space-between;
 }

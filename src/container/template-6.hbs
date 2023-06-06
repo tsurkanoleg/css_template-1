@@ -42,10 +42,14 @@
 		<div class="updates_title">{{title}}</div>
 		<div class="updates_list">
 			{{#each list}} 
-				<div class="avatar"></div>
-				<h3 class="list_nickname">@{{nickname}}</h3>
-				<p class="list_description">{{description}}</p>
-				<div class="border_padding"></div>
+				<div class="updates_div">
+					<div class="updates_avatar "></div>
+					<div class="updates_list">
+						<h3 class="list_nickname ">@{{nickname}}</h3>
+						<p class="list_description ">{{description}}</p>
+					</div>					
+				</div>
+				<div class="border_padding "></div>
 			{{/each}}
 		</div>
 		<a href="{{show_all.url}}" class="updates_show_all">{{show_all.text}}</a>
@@ -54,16 +58,21 @@
 	
 </div>
 
+
 <div class="experience">
 	{{#with expirience}} 
-		<div class="experience_title">{{title}}</div>
-		<div class="experience_badge">{{badge}}</div>
-		{{#each list}} 
-			<div class="list_list">
-				<h4 class="list_name">{{name}}</h4>
-				<p class="list_details">{{details}}</p>
-			</div>
-		{{/each}}
+		<div class="experience_tb">
+			<div class="experience_title">{{title}}</div>
+			<div class="experience_badge">{{badge}}</div>
+		</div>
+		<div class="experience_list">
+			{{#each list}}
+				<div class="experience_list_list">
+					<h4 class="experience_list_name">{{name}}</h4>
+					<p class="experience_list_details">{{details}}</p>
+				</div>
+			{{/each}}
+		</div>
 	{{/with}}
 </div>
 
