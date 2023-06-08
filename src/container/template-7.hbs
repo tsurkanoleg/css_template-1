@@ -1,0 +1,94 @@
+<header class="header">
+	{{#with header}}
+		<div class="header_content">
+			<a href="#test">
+				<div class="logo">
+					<span class="badge text-bg-primary">{{brandName}}</span>
+				</div>
+			
+			</a>
+			<nav class="header_nav ">
+				<div class="header_nav_right">
+					{{> nav list=links }}
+				</div>
+			</nav>
+		</div>
+	{{/with}}
+
+
+	<div class="ad_a_t">
+		{{#with header}}		
+			<div class="ad_online">
+				<div class="ad_header">
+					<div class="ad_ad">Ad</div>
+					<div class="ad_text">  {{ad.text}}:<a class="ad_url" href="{{ad.url}}">{{ad.url}}</a></div>
+				</div>
+
+				<div class="user_online">
+					<div class="user_online2">User online:</div>
+					<div class="rer">{{userOnline}}</div>
+				</div>
+			</div>
+		{{/with}}
+	</div> 
+</header> 
+
+<div class="hero">
+	{{#with hero}} 
+		<div class="hero_body">
+			<h1 class="hero_title">{{title}}</h1>
+			<p class="hero_description">{{description}}</p>
+			<a href="{{button.url}}" class="hero_button">{{button.text}}</a>
+		</div>
+	{{/with}}
+</div>
+
+<div class="about">
+	{{#with about}} 
+		<h2 class="about_heading">{{heading}}</h2>
+		<p class="about_info">{{info}}</p>
+	{{/with}}
+</div>
+
+<div class="articles">
+	<div class="art_header">
+		<div class="articles_our">Our Articles</div>
+		<button class="articles_button">View All</button>
+	</div>
+
+	<div class="articles_a">
+		{{#each articles}}
+			<div class="articles_b">
+				<div>
+					
+					{{#if isNew}}
+						<div class="articles_is_new">NEW</div>
+						{{else}}
+					{{/if}}
+					
+					<img src="{{photo}}" alt="{{name}}" class="articles_img">
+				</div>
+				<h3 class="articles_name" id="{{id}}">{{name}}</h3>
+				<p class="articles_description">{{description}}</p>
+				<button class="read_all">Read all</button>
+			</div>
+		{{/each}}
+	</div>
+
+</div>
+
+
+<footer class="footer">
+	{{#with footer}} 
+		<div class="footer_content">
+			
+			<div class="footer_pages">
+				{{#each pages}}
+					<a href="{{path}}" class="footer_path">{{name}}</a>
+				{{/each}}
+			</div>
+			<div class="footer_copyright">{{copyright}}</div>
+		</div>
+		
+	{{/with}}
+</footer>
