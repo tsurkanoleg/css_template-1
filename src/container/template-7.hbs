@@ -59,8 +59,15 @@
 	<div class="articles_a">
 		{{#each articles}}
 			<div class="articles_b">
-				<div class="articles_is_new">{{isNew}}</div>
-				<img src="{{photo}}" alt="{{name}}" class="articles_img">
+				<div>
+					
+					{{#if isNew}}
+						<div class="articles_is_new">NEW</div>
+						{{else}}
+					{{/if}}
+					
+					<img src="{{photo}}" alt="{{name}}" class="articles_img">
+				</div>
 				<h3 class="articles_name" id="{{id}}">{{name}}</h3>
 				<p class="articles_description">{{description}}</p>
 				<button class="read_all">Read all</button>
@@ -85,28 +92,3 @@
 		
 	{{/with}}
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-{{!-- <footer class="footer" id="test">
-	<div>
-		{{> logo}}
-		<span class="footer_copyright">Copyright 2023-2024</span>
-	</div>
-
-	{{#each footer}}
-		<div>
-			<span class="footer_title">{{title}}</span>
-			{{>nav list=links isVertical=true}}
-		</div>
-	{{/each}}
-</footer> --}}
