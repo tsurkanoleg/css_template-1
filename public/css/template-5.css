@@ -149,8 +149,8 @@ transition-duration: 1s;
 }
 
 .messages {
-	max-width: 620px;
-	width: 100%;
+	/* max-width: 620px;
+	width: 100%; */
 
 	background-color: var(--color-white);
 	border-radius: var(--border-radius-d);
@@ -231,7 +231,7 @@ transition-duration: 1s;
 	gap: var(--space-l);
 }
 
-.advantages > div {
+.advantages > div, .advantage {
 	display: flex;
 	flex-direction: column;
 	border: 1px solid #e4eaf2;
@@ -242,13 +242,13 @@ transition-duration: 1s;
 	/* width: 100%; */
 }
 
-.advantages > div > strong {
+.advantages > div > strong .advantage > strong {
 	color: var(--color-title);
 	font-weight: var(--weight-title);
 	font-size: 18px;
 }
 
-.advantages > div >p {
+.advantages > div > p, .advantage > p {
 	color: #767676;
 	font-size: var(--size-d);
 	line-height: 150%;
@@ -263,8 +263,8 @@ transition-duration: 1s;
 
 
 .form {
-	max-width: 340px;
-	width: 100%;
+	/* max-width: 340px;
+	width: 100%; */
 
 	background-color: var(--color-white);
 	border-radius: var(--border-radius-d);
@@ -341,4 +341,89 @@ transition-duration: 1s;
 .form_checkbox > label {
 	color: var(--color-title);
 	font-size: var(--size-d);
+}
+
+.advantages {
+	display: grid;
+	height: 800px;
+
+	/* grid-template-columns: repeat(
+		auto-fit,
+		minmax(300px, 1fr)
+	); */
+	
+	/* grid-template-rows: repeat(3, 1fr); */
+	grid-template-columns: repeat(1, 1fr);
+
+	place-content: flex-end flex-end;
+
+	justify-content: flex-end center;
+
+	grid-auto-rows: 120px;
+
+}
+
+.advantages > div:first-of-type {
+	place-self: flex-start flex-start;
+	
+}
+
+.main {
+	display: grid;
+
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	/* grid-template-areas: 'messages messages form' 'advantages advantages advantages'; */
+
+	grid-auto-rows: 2fr;
+
+
+}
+
+.messages {
+	grid-column: 1 / 3;
+	grid-row: 1 / 3;
+}
+
+.form {
+	grid-column: 3 / 4;
+	grid-row: 1 / 3;
+}
+
+.advantages {
+	/* grid-column: 3 / 4; */
+	grid-row: 3 / 4;
+}
+
+.advantage {
+	height: 100%;
+}
+
+.footer {
+	display: grid;
+
+	grid-template-columns: repeat(4, 1fr);
+	/* grid-auto-columns: 3fr; */
+
+	grid-auto-flow: row dense;
+}
+
+/* .footer > div {
+	background-color: #e4eaf2;
+} */
+
+/* .footer > div:first-of-type {
+	grid-column: 1 / 3;
+	
+	background-color: red;
+}
+
+.footer > div:nth-of-type(2) {
+	grid-column: 1 / 3;
+	
+	background-color: rgb(13, 22, 126); 
+} */
+
+.footer > div:nth-of-type(2) {
+	order: -1;
 }

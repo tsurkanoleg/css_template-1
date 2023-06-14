@@ -308,6 +308,7 @@ transition-duration: 1s;
 	gap: 16px;
 	flex-wrap: wrap;
 	position: relative;
+	width: calc(100% / 3);
 }
 
 .articles_img {

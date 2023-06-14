@@ -1,3 +1,18 @@
+@import '/css/var.css';
+
+
+@font-face{
+	font-family: segment;
+	src:url(/font/Segment-Regular.otf);
+	font-weight: 400;
+}
+
+@font-face{
+	font-family: segment;
+	src:url(/font/Segment-SemiBold.otf);
+	font-weight: 600;
+}
+
 @keyframes fly {
 	from {
 		top: 0;
@@ -29,29 +44,6 @@
 	}
 }
 
-:root {
-	--space-m: 12px;
-	--space-xm: 16px;
-	--space-l: 24px;
-	--space-b: 36px;
-
-	--size-s: 14px;
-	--size-d: 16px;
-	--size-l: 20px;
-
-	--color-border: #dee2e6;
-	--color-primary: rgb(37, 117, 221);
-	--color-white: #ffffff;
-	--color-title: #212529;
-	--color-text: #343a40;
-
-	--border-radius: 12px;
-
-	--weight-title: 500;
-	--weight-text: 400;
-
-	--page-width: 960px;
-}
 
 /* ======================== */
 
@@ -400,3 +392,67 @@ body:hover .modal {
 	scroll-behavior: smooth;
 }
 
+.blog {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@media all and (width <= 600px) {
+	.blog {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media all and (600px < width <= 800px) {
+	.blog {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* @media all and (min-height: 600px) {
+	.page_content{
+		background-color: red;
+	}
+} */
+
+.form {
+	gap: var(--space-l);
+}
+
+@media all and (width <= 560px) {
+	.form {
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.form_info {
+		max-width: 300px;
+		width: 100%;
+		line-height: 150%;
+	}
+
+	.form_content {
+		align-items: center;
+		text-align: center;
+	}
+}
+
+.hero_container {
+	container-type: inline-size;
+	container-name: hero;
+}
+
+@container hero (width < 960px) {
+	.hero {
+		flex-direction: column;
+	}
+}
+
+.hero_title:hover {
+	font-family: Segment;
+}
+
+.hero_title {
+	font-size: 5cqw;
+}

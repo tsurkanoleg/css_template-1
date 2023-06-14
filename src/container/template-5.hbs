@@ -11,6 +11,7 @@
 
 
 <main class="main">
+
 	{{#with messages}}
 		<div class="messages">
 			<h1 class="messages_title">{{title}}</h1>
@@ -26,6 +27,7 @@
 			<a href="#" class="messages_link">All messages</a>
 		</div>
 	{{/with}}
+
 	{{#with form}}
 		<form class="form">
 			<h2 class="form_title">{{title}}</h2>
@@ -45,6 +47,13 @@
 			<p class="form_info">{{info}}</p>
 		</form>
 	{{/with}}
+	
+	{{#each advantages}} 
+		<div class="advantage">
+			<strong>{{title}}</strong>
+			<p>{{text}}</p>
+		</div>
+	{{/each}}
 
 </main>
 
