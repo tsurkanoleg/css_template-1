@@ -76,7 +76,7 @@
 }
 
 body {
-	font-family: 'HelveticaNeueBold', 'sans-serif';
+	font-family: 'HelveticaNeueBold', sans-serif;
 
 	background-color: var(--color-white);
 }
