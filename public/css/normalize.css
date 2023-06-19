@@ -75,9 +75,9 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 
-a {
+/* a {
     background-color: transparent;
-}
+} */
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -510,7 +510,7 @@ main::-webkit-scrollbar {
   display: none !important;
 }
 
-a,
+/* a,
 abbr,
 acronym,
 address,
@@ -596,7 +596,7 @@ video {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
-}
+} */
 
 :focus {
   outline: 0;
